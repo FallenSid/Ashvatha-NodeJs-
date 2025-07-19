@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dive into the dark, emotional world of “The Hours That Break Quiet” — an epic character-driven fantasy where illusions, betrayal, and broken promises shape the fate of seven unforgettable warriors. With intense action, psychological depth, and complex relationships, this story blends high-stakes battles with soul-crushing choices. Perfect for fans of seinen manga, dark fantasy, and anime-inspired storytelling. Read now and uncover the power of shattered heavens and haunted hearts.">
+    <meta name="keywords"
+        content="dark fantasy novel, anime-inspired fiction, character-driven fantasy, emotional action story, psychological fantasy drama">
+    <title>Character Page | The Ashvathha</title>
+    <style>
+        body {
+            background-color: black;
+            z-index: -100;
+        }
+
+        #bg {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            opacity: 0.8;
+            z-index: -90;
+        }
+
+        .container {
+            grid-template-areas:
+                'nav';
+        }
+
+        #navbar {
+            grid-area: nav;
+            background-color: rgba(0, 0, 0, 0.626);
+            width: 86vw;
+            margin: auto;
+            border: 2px solid white;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        #navbar ul {
+            display: flex;
+            margin: 0px;
+            list-style: none;
+            text-wrap: wrap;
+        }
+
+        #navbar li {
+            padding: 1.5vh 0px;
+            margin: auto;
+        }
+
+        #navbar li a {
+            color: white;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        #navbar li a:hover {
+            color: red;
+        }
+
+        .content {
+            margin-top: 20px;
+            display: flex;
+            z-index: -80;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            position: absolute;
+        }
+
+        .box {
+            position: relative;
+            top: 1px;
+            height: 300px;
+            width: 300px;
+            border: 3px solid rgb(255, 0, 0);
+            background-color: black;
+            margin: 30px;
+            z-index: -80;
+        }
+
+        .box:hover {
+            z-index: -80;
+            transform: scale(1.1);
+            transition-duration: 0.25s;
+            box-shadow: 5px 5px 10px rgb(255, 0, 0);
+        }
+
+        .content p {
+            z-index: -60;
+            color: white;
+            text-align: center;
+            text-shadow: 3px 3px 3px rgb(255, 255, 255);
+            font-weight: bold;
+            border: 4px solid black;
+            background-color: black;
+        }
+
+        #bg1 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg2 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg3 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg4 img {
+            height: 300px;
+            width: 300px;
+            object-position: 0px -35px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg5 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: 0px -35px;
+            z-index: -60;
+        }
+
+        #bg6 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg7 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: top;
+            z-index: -60;
+        }
+
+        #bg8 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: top;
+            z-index: -60;
+        }
+
+        #bg9 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg10 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: top;
+            z-index: -60;
+        }
+
+        #bg11 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: top;
+            z-index: -60;
+        }
+
+        #bg12 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: 0px -10px;
+            z-index: -60;
+        }
+
+        .infoblock {
+            display: flex;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 18%;
+            min-width: 1100px;
+            max-width: 1200px;
+            min-height: 600px;
+            max-height: 605px;
+            border: 2px solid white;
+            box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.595);
+            display: none;
+        }
+
+        .info {
+            display: grid;
+            width: 30%;
+            height: 605px;
+            background-color: black;
+        }
+
+        .details {
+            width: 70%;
+            height: 600px;
+            background-color: rgb(0, 0, 0);
+            border: 3px solid white;
+            color: white;
+        }
+
+        .ch_img {
+            width: 100%;
+            margin-top: 25px;
+            height: 450px;
+            background-color: black;
+        }
+
+        .ch_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .ch_info {
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            height: 100px;
+            color: white;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .btn {
+            position: absolute;
+            height: 24px;
+            width: 30px;
+            border: 1px solid red;
+            top: 0px;
+            right: 0px;
+            background-color: red;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: rgb(220, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="bg" src="img/cbg.jpg" alt="tumse na hoga bhai">
+        <nav>
+            <div id="navbar">
+                <ul>
+                    <li><a href="/newhomepage.html">Home</a></li>
+                    <li><a href="/volume.html">Volume</a></li>
+                    <li><a href="#">Character</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="/aboutwriter.html">About Writter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="content" id="content_block">
+        <div id="bg1" class="box">
+            <img src="img/char/swayam.jpg" alt="">
+            <p>SWAYAM</p>
+        </div>
+
+        <div id="bg2" class="box">
+            <img src="img/char/rachit.jpg" alt="">
+            <p>RACHIT</p>
+        </div>
+
+        <div id="bg3" class="box">
+            <img src="img/char/gaurav.jpg" alt="">
+            <p>GAURAV</p>
+        </div>
+
+        <div id="bg4" class="box">
+            <img src="img/char/aviral.jpg" alt="">
+            <p>AVIRAL</p>
+        </div>
+
+        <div id="bg5" class="box">
+            <img src="img/char/anshika.jpg" alt="">
+            <p>ANSHIKA</p>
+        </div>
+
+        <div id="bg6" class="box">
+            <img src="img/char/yugetsu.jpg" alt="">
+            <p>YUGETSU</p>
+        </div>
+
+        <div id="bg7" class="box">
+            <img src="img/char/reinhard.jpg" alt="">
+            <p>REINHARD</p>
+        </div>
+
+        <div id="bg8" class="box">
+            <img src="img/char/abhishraap.jpg" alt="">
+            <p>ABHISHRAAP</p>
+        </div>
+
+        <div id="bg9" class="box">
+            <img src="img/char/scar.jpg" alt="">
+            <p>SCAR</p>
+        </div>
+
+        <div id="bg10" class="box">
+            <img src="img/char/kaal.jpg" alt="">
+            <p>KAAL</p>
+        </div>
+
+        <div id="bg11" class="box">
+            <img src="img/char/lilith.jpg" alt="">
+            <p>LILITH</p>
+        </div>
+
+        <div id="bg12" class="box">
+            <img src="img/char/NYSS.jpg" alt="">
+            <p>NYSS</p>
+        </div>
+    </div>
+
+    <div class="infoblock" id="swayam">
+        <div class="info">
+            <div class="ch_img">
+                <img src="img/char/swayam.jpg" alt="">
+
+            </div>
+            <div class="ch_info">
+                <h1>SWAYAM</h1>
+            </div>
+        </div>
+        <div class="details">hey i am details
+            <button class="btn" id="btn1">X</button>
+
+        </div>
+    </div>
+
+    <div class="infoblock" id="rachit">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/rachit.jpg" alt=""></div>
+            <div class="ch_info">
+                <h1>RACHIT</h1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn2">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="gaurav">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/gaurav.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>GAURAV</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn3">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="aviral">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/aviral.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>AVIRAL</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn4">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="anshika">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/anshika.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>ANSHIKA</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn5">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="yugetsu">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/yugetsu.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>YUGETSU</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn6">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="reinhard">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/reinhard.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>REINHARD</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn7">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="abhishraap">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/abhishraap.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>ABHISHRAAP</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn8">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="scar">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/scar.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>SCAR</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn9">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="kaal">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/kaal.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>KAAL</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn10">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="lilith">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/lilith.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>LILITH</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn11">X</button>
+        </div>
+    </div>
+
+    <div class="infoblock" id="nyss">
+        <div class="info">
+            <div class="ch_img"><img src="img/char/nyss.jpg" alt=""></div>
+            <div class="ch_info">
+                <H1>NYSS</H1>
+            </div>
+        </div>
+        <div class="details">
+            <button class="btn" id="btn12">X</button>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    const content = document.querySelector('.content')
+    const bg = document.querySelector('#bg')
+
+    const bg1 = document.querySelector('#bg1')
+    const swayam = document.querySelector('#swayam')
+    const btn1 = document.querySelector('#btn1')
+    bg1.addEventListener('click', () => {
+        swayam.style.display = 'flex'
+    })
+    btn1.addEventListener('click', () => {
+        swayam.style.display = 'none'
+    })
+
+    const bg2 = document.querySelector('#bg2')
+    const rachit = document.querySelector('#rachit')
+    const btn2 = document.querySelector('#btn2')
+    bg2.addEventListener('click', () => {
+        rachit.style.display = 'flex'
+    })
+    btn2.addEventListener('click', () => {
+        rachit.style.display = 'none'
+    })
+
+
+    const bg3 = document.querySelector('#bg3')
+    const gaurav = document.querySelector('#gaurav')
+    const btn3 = document.querySelector('#btn3')
+    bg3.addEventListener('click', () => {
+        gaurav.style.display = 'flex'
+    })
+    btn3.addEventListener('click', () => {
+        gaurav.style.display = 'none'
+    })
+
+
+
+    const bg4 = document.querySelector('#bg4')
+    const aviral = document.querySelector("#aviral")
+    const btn4 = document.querySelector('#btn4')
+    bg4.addEventListener('click', () => {
+        aviral.style.display = 'flex'
+    })
+    btn4.addEventListener('click', () => {
+        aviral.style.display = 'none'
+    })
+
+
+    const bg5 = document.querySelector('#bg5')
+    const anshika = document.querySelector('#anshika')
+    const btn5 = document.querySelector('#btn5')
+    bg5.addEventListener('click', () => {
+        anshika.style.display = 'flex'
+    })
+    btn5.addEventListener('click', () => {
+        anshika.style.display = 'none'
+    })
+
+
+    const bg6 = document.querySelector('#bg6')
+    const yugetsu = document.querySelector('#yugetsu')
+    const btn6 = document.querySelector('#btn6')
+    bg6.addEventListener('click', () => {
+        yugetsu.style.display = 'flex'
+    })
+    btn6.addEventListener('click', () => {
+        yugetsu.style.display = 'none'
+    })
+
+
+    const bg7 = document.querySelector('#bg7')
+    const reinhard = document.querySelector('#reinhard')
+    const btn7 = document.querySelector('#btn7')
+    bg7.addEventListener('click', () => {
+        reinhard.style.display = 'flex'
+    })
+    btn7.addEventListener('click', () => {
+        reinhard.style.display = 'none'
+    })
+
+
+    const bg8 = document.querySelector('#bg8')
+    const abhishraap = document.querySelector('#abhishraap')
+    const btn8 = document.querySelector('#btn8')
+    bg8.addEventListener('click', () => {
+        abhishraap.style.display = 'flex'
+    })
+    btn8.addEventListener('click', () => {
+        abhishraap.style.display = 'none'
+    })
+
+
+    const bg9 = document.querySelector('#bg9')
+    const scar = document.querySelector('#scar')
+    const btn9 = document.querySelector('#btn9')
+    bg9.addEventListener('click', () => {
+        scar.style.display = 'flex'
+    })
+    btn9.addEventListener('click', () => {
+        scar.style.display = 'none'
+    })
+
+
+    const bg10 = document.querySelector('#bg10')
+    const kaal = document.querySelector('#kaal')
+    const btn10 = document.querySelector('#btn10')
+    bg10.addEventListener('click', () => {
+        kaal.style.display = 'flex'
+    })
+    btn10.addEventListener('click', () => {
+        kaal.style.display = 'none'
+    })
+
+
+    const bg11 = document.querySelector('#bg11')
+    const lilith = document.querySelector('#lilith')
+    const btn11 = document.querySelector('#btn11')
+    bg11.addEventListener('click', () => {
+        lilith.style.display = 'flex'
+    })
+    btn11.addEventListener('click', () => {
+        lilith.style.display = 'none'
+    })
+
+
+    const bg12 = document.querySelector('#bg12')
+    const nyss = document.querySelector('#nyss')
+    const btn12 = document.querySelector('#btn12')
+    bg12.addEventListener('click', () => {
+        nyss.style.display = 'flex'
+    })
+    btn12.addEventListener('click', () => {
+        nyss.style.display = 'none'
+    })
+
+
+
+</script>
+
+</html>
+
+</html>

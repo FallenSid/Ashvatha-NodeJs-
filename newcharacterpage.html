@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dive into the dark, emotional world of “The Hours That Break Quiet” — an epic character-driven fantasy where illusions, betrayal, and broken promises shape the fate of seven unforgettable warriors. With intense action, psychological depth, and complex relationships, this story blends high-stakes battles with soul-crushing choices. Perfect for fans of seinen manga, dark fantasy, and anime-inspired storytelling. Read now and uncover the power of shattered heavens and haunted hearts.">
+    <meta name="keywords"
+        content="dark fantasy novel, anime-inspired fiction, character-driven fantasy, emotional action story, psychological fantasy drama">
+    <title>Character Page | The Ashvathha</title>
+    <style>
+        body {
+            background-color: black;
+            z-index: -100;
+        }
+
+        #bg {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            opacity: 0.8;
+            z-index: -90;
+        }
+
+        .container {
+            grid-template-areas:
+                'nav';
+        }
+
+        #navbar {
+            grid-area: nav;
+            background-color: rgba(0, 0, 0, 0.626);
+            width: 86vw;
+            margin: auto;
+            border: 2px solid white;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        #navbar ul {
+            display: flex;
+            margin: 0px;
+            list-style: none;
+            text-wrap: wrap;
+        }
+
+        #navbar li {
+            padding: 1.5vh 0px;
+            margin: auto;
+        }
+
+        #navbar li a {
+            color: white;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        #navbar li a:hover {
+            color: red;
+        }
+
+        .content {
+            margin-top: 20px;
+            display: flex;
+            z-index: -80;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            position: absolute;
+        }
+
+        .box {
+            position: relative;
+            top: 1px;
+            height: 300px;
+            width: 300px;
+            border: 3px solid rgb(255, 0, 0);
+            background-color: black;
+            margin: 30px;
+            z-index:-80;
+        }
+
+        .box:hover {
+            z-index: -80;
+            transform: scale(1.1);
+            transition-duration: 0.25s;
+            box-shadow: 5px 5px 10px rgb(255, 0, 0);
+        }
+
+        .content p {
+            z-index: -60;
+            color: white;
+            text-align: center;
+            text-shadow: 3px 3px 3px rgb(255, 255, 255);
+            font-weight: bold;
+            border: 4px solid black;
+            background-color: black;
+        }
+
+        #bg1 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg2 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg3 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg4 img {
+            height: 300px;
+            width: 300px;
+            object-position: 0px -35px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg5 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: 0px -35px;
+            z-index: -60;
+        }
+
+        #bg6 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg7 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: top;
+            z-index: -60;
+        }
+
+        #bg8 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: top;
+            z-index: -60;
+        }
+
+        #bg9 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            z-index: -60;
+        }
+
+        #bg10 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: top;
+            z-index: -60;
+        }
+
+        #bg11 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: top;
+            z-index: -60;
+        }
+
+        #bg12 img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: 0px -10px;
+            z-index: -60;
+        }
+        .infobox{
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 5rem;
+            display: flex;
+            z-index: -1;
+            height: 600px;
+            width: 1100px;
+            background-color: black;
+            border: 3px solid white;
+            display: none;
+        }
+        .info{
+            width: 30%;
+            display: grid;
+        }
+        .ch_info{
+            background-color: blue;
+        }
+        .ch_details{
+            /* width: 70%;
+            height: 100%;
+            border: 2px solid white;
+            background-color: green; */
+        }
+        .ch_image{
+            /* width: 330px; */
+            width: 100%;
+            /* height: 150px; */
+            object-fit: fill;
+        }
+        #swayam{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="bg" src="img/cbg.jpg" alt="tumse na hoga bhai">
+        <nav>
+            <div id="navbar">
+                <ul>
+                    <li><a href="/newhomepage.html">Home</a></li>
+                    <li><a href="/volume.html">Volume</a></li>
+                    <li><a href="#">Character</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="/aboutwriter.html">About Writter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div id="bg1" class="box">
+            <img src="img/char/swayam.jpg" alt="">
+            <p>SWAYAM</p>
+        </div>
+
+        <div id="bg2" class="box">
+            <img src="img/char/rachit.jpg" alt="">
+            <p>RACHIT</p>
+        </div>
+
+        <div id="bg3" class="box">
+            <img src="img/char/gaurav.jpg" alt="">
+            <p>GAURAV</p>
+        </div>
+
+        <div id="bg4" class="box">
+            <img src="img/char/aviral.jpg" alt="">
+            <p>AVIRAL</p>
+        </div>
+
+        <div id="bg5" class="box">
+            <img src="img/char/anshika.jpg" alt="">
+            <p>ANSHIKA</p>
+        </div>
+
+        <div id="bg6" class="box">
+            <img src="img/char/yugetsu.jpg" alt="">
+            <p>YUGETSU</p>
+        </div>
+
+        <div id="bg7" class="box">
+            <img src="img/char/reinhard.jpg" alt="">
+            <p>REINHARD</p>
+        </div>
+
+        <div id="bg8" class="box">
+            <img src="img/char/abhishraap.jpg" alt="">
+            <p>ABHISHRAAP</p>
+        </div>
+
+        <div id="bg9" class="box">
+            <img src="img/char/scar.jpg" alt="">
+            <p>SCAR</p>
+        </div>
+
+        <div id="bg10" class="box">
+            <img src="img/char/kaal.jpg" alt="">
+            <p>KAAL</p>
+        </div>
+
+        <div id="bg11" class="box">
+            <img src="img/char/lilith.jpg" alt="">
+            <p>LILITH</p>
+        </div>
+
+        <div id="bg12" class="box">
+            <img src="img/char/NYSS.jpg" alt="">
+            <p>NYSS</p>
+        </div>
+    </div>
+
+
+    <div id="swayam" class="infobox">
+        <div class="info">
+            <div class="ch_image">
+                <!-- <img src="img/char/swayam.jpg" alt="swayam"> -->
+            </div>
+            <div class="ch_info">i am info</div>
+        </div>
+        <div class="ch_details">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, tempora voluptatibus! Sit provident quod accusamus assumenda totam sed, magni aut nulla. Delectus laboriosam illo officia odio velit, eveniet a ipsa?</p>
+        </div> 
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+    <div id="" class="infobox">
+        <div class="info">
+            <div class="ch_image"></div>
+            <div class="ch_info"></div>
+        </div>
+        <div class="ch_details"></div>
+    </div>
+</body>
+
+</html>
+</html>

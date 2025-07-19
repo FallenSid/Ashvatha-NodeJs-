@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 20px;
+        }
+        .box:hover{
+            transform: scale(1.1);
+            transition-duration: 0.2s;
+        }
+        #bg0 img{
+            /* background-image: url(img/this\ guy.webp);
+            object-fit: contain;
+            background-position: center center; */
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="bg0" class="box"><img src="img/this guy.webp" alt=""></div>
+        <div id="bg1" class="box">item-2</div>
+        <div id="bg2" class="box">item-3</div>
+        <div id="bg3" class="box">item-4</div>
+        <div id="bg4" class="box">item-5</div>
+        <div id="bg5" class="box">item-6</div>
+        <div id="bg6" class="box">item-7</div>
+        <div id="bg7" class="box">item-8</div>
+        <div id="bg8" class="box">item-9</div>
+        <div id="bg9" class="box">item-10</div>
+        <div id="bg10" class="box">item-11</div>
+        <div id="bg11" class="box">item-12</div>
+        <div id="bg12" class="box">item-13</div>
+        <div id="bg13" class="box">item-14</div>
+        <div id="bg14" class="box">item-15</div>
+    </div>
+</body>
+</html>

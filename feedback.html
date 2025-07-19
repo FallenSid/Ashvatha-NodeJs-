@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback page | The Ashvathha</title>
+    <link href="https://fonts.cdnfonts.com/css/horror-type" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            z-index: -100;
+        }
+
+        #bg {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            opacity: 0.8;
+            z-index: -80;
+        }
+
+        .container {
+            grid-template-areas:
+                'nav';
+        }
+
+        #navbar {
+            grid-area: nav;
+            background-color: rgba(0, 0, 0, 0.626);
+            width: 86vw;
+            margin: auto;
+            border: 2px solid white;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        #navbar ul {
+            display: flex;
+            margin: 0px;
+            list-style: none;
+            text-wrap: wrap;
+        }
+
+        #navbar li {
+            padding: 1.5vh 0px;
+            margin: auto;
+        }
+
+        #navbar li a {
+            color: white;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        #navbar li a:hover {
+            color: red;
+        }
+        main{
+            display: flex;
+        }
+    .content{
+        position: sticky;
+        bottom: 0px;
+        height: 80vh;
+        width: 40%;
+        /* border: 2px solid black; */
+        margin: auto;
+        margin: 5vh;
+    }
+    #guy{
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1.1);
+    }
+    #guy:hover{
+        transform: scale(1.2);
+        transition-duration: 0.2s;
+    }
+    #guy:hover audio{
+        display: block;
+    }
+    #feedback{
+        border: 3px solid white;
+        border-radius: 30px;
+        background-color: rgba(0, 0, 0, 0.751);
+    }
+    .content h1{
+        text-align: center;
+        color: white;
+    }
+    form{
+        color: white;
+        padding-left: 50px;
+    }
+    form input{
+        width: 300px;
+        height: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    form textarea{
+        width: 400px;
+        height: 200px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+    }
+    #submit , #reset{
+        display: inline;
+        height: 30px;
+        width: 70px;
+        background-color: red;
+    }
+    #submit:hover , #reset:hover{
+        background-color: rgb(232, 0, 0);
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="bg" src="img/download (31).jpeg.jpg" alt="tumne na hoga bhai">
+        <nav>
+            <div id="navbar">
+                <ul>
+                    <li><a href="/newhomepage.html">Home</a></li>
+                    <li><a href="/volume.html">Volume</a></li>
+                    <li><a href="/character.html">Character</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="aboutwriter.html">About Writter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="content">
+                <img id="guy" src="img/char/this guy-Photoroom.png" alt="">
+                <audio hidden autoplay muted src="/audio/boo-and-laugh-7060.mp3"></audio>
+            </div>
+            <div id="feedback" class="content">
+                <h1>Tell Us What's Inside you</h1>
+                <form action="#">
+                    <label for="name">Name:</label>
+                    <div id="inputname"><input placeholder="Human..." type="text"></div>
+                    <br>
+                    <label for="fdback">Feedback</label>
+                    <div id="textarea">
+                        <textarea placeholder="I am Filthy Monkey" name="textarea" id="fdback"></textarea>
+                    </div>
+                    <br>
+                    <input id="submit" type="submit" value="Submit">
+                    <input id="reset" type="Reset">
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
