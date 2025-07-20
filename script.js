@@ -1,0 +1,164 @@
+
+//STARTING TO ENABLE SERVER USING BACKEND
+
+const http = require('http');
+
+const hostname = '127.0.0.1'; // localhost
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200; // HTTP status code for OK
+  res.setHeader('Content-Type', 'text/html'); // Set the content type of the response
+  res.end(`<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ashwathha Homepage</title>
+    <meta
+     name="description"
+     content="Dive into the dark, emotional world of “The Hours That Break Quiet” — an epic character-driven fantasy where illusions, betrayal, and broken promises shape the fate of seven unforgettable warriors. With intense action, psychological depth, and complex relationships, this story blends high-stakes battles with soul-crushing choices. Perfect for fans of seinen manga, dark fantasy, and anime-inspired storytelling. Read now and uncover the power of shattered heavens and haunted hearts.">
+     <meta name="keywords" content="dark fantasy novel, anime-inspired fiction, character-driven fantasy, emotional action story, psychological fantasy drama">
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                'nav nav nav'
+                'main main main';
+        }
+
+        main{
+            grid-area: main;
+        }
+
+        #navbar {
+            grid-area: nav;
+            background-color: rgba(0, 0, 0, 0.626);
+            width: 86vw;
+            margin: auto;
+            border: 2px solid white;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        #intro h1 {
+            color: white;
+            text-decoration: underline;
+            font-size: 3rem;
+        }
+
+        #intro h2 {
+            color: white;
+            text-decoration: underline;
+            font-size: 1.5rem;
+        }
+
+        #intro {
+            grid-area: intro;
+            width: 80vw;
+            margin: auto;
+            text-align: center;
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 12px 5px 4px black;
+            text-wrap: wrap;
+        }
+
+        img {
+            display: block;
+            position: fixed;
+            opacity: 0.7;
+            z-index: -1;
+            height: 100vh;
+            width: 100vw;
+            top: -1px;
+            left: -1px;
+        }
+
+        body {
+            background-color: black;
+            z-index: -2;
+        }
+
+        #navbar ul {
+            display: flex;
+            margin: 0px;
+            list-style: none;
+            text-wrap: wrap;
+        }
+
+        #navbar li {
+            padding: 1.5vh 0px;
+            margin: auto;
+        }
+
+        #navbar li a {
+            color: white;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+        nav{
+            grid-area: nav;
+        }
+        #navbar li a:hover {
+            color: red;
+        }
+        audio{
+            display:hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="img/bg4.png" alt="na ho paiga tumhare internet se">
+        <nav>
+            <div id="navbar" class="box">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/volume.html">Volume</a></li>
+                    <li><a href="/character.html">Character</a></li>
+                    <li><a href="/feedback.html">Feedback</a></li>
+                    <li><a href="aboutwriter.html">About Writter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+
+            <div id="intro" class="box">
+                <h1>The Ashwathha</h1>
+                <h2>WELCOME TO A WORLD THAT FORGOT HOPE...</h2>
+                <p>In the shadow of a world once ruled by men, the age of demons has begun.</p>
+                <p>The story unfolds in the aftermath of an apocalyptic collapse — a cataclysmic event that fractured
+                    the
+                    fabric of reality and reshaped the Earth into a realm ruled by nightmares. In this twisted,
+                    post-apocalyptic landscape, humanity clings to survival as demonic hierarchies dominate cities,
+                    skies,and even the law of existence.</p>
+                <p>But from the ashes rise seven broken souls — not heroes, not saviors — each marked by loss,
+                    vengeance, or
+                    fractured loyalty. Bound by uncertain fates, they traverse the ruins of civilization and the ancient
+                    glyph-forged Paths that challenge not just the body, but the soul itself.</p>
+                <ul>
+                    <li>Secrets buried in Blood...</li>
+                    <li>Bonds tested by fire...</li>
+                    <li>Illusions more real than memory...</li>
+                </ul>
+                <p>This is not a tale of good versus evil. It is the slow unraveling of identity in a world where hope
+                    is
+                    weaponized, and power comes at the cost of self.</p>
+                <p>And ask yourself — when the world offers you a heaven... <strong>will you take it?
+                        Or will you burn it?</strong></p>
+            </div>
+           
+        </main>
+    </div>
+</body>
+
+</html>`); // Send the response body and end the response
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
